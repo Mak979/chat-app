@@ -4,17 +4,14 @@ export default makeStyles((theme) => ({
   mainContainer: {
     position: "relative",
     display: "flex",
-    width: "100%",
-    height: "99vh",
-    maxHeight: "100vh",
     backgroundColor: "#161a36",
     margin: "0px auto",
     padding: "0px",
     overflow: "hidden",
+    boxSizing: 'content-box'
   },
   leftBox: {
     width: "35%",
-    height: "100vh",
     padding: "20px",
   },
 
@@ -47,7 +44,7 @@ export default makeStyles((theme) => ({
 
   allContacts: {
     width: "100%",
-    height: "700px",
+    height: '620px',
     overflowY: "auto",
     overflowX: "hidden",
     scrollBehavior: "auto",
@@ -190,7 +187,7 @@ export default makeStyles((theme) => ({
 
   displayMessage: {
     width: "100%",
-    height: "599px",
+    height: "530px",
     padding: "10px",
     display: "flex",
     flexDirection: "column",

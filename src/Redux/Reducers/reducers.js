@@ -20,13 +20,10 @@ const initialState = {
       mobile: 9864938264,
     },
     {
-      name: "Mohan",
+      name: "Geeta",
       mobile: 9864938265,
     },
-    {
-      name: "Seeta",
-      mobile: 9864938266,
-    },
+    
   ],
 };
 

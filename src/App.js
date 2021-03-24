@@ -18,7 +18,7 @@ function App() {
   })
   return (
     <div className="App">
-      <Container className={classes.mainContainer} fixed>
+      <Container className={classes.mainContainer} fixed maxWidth="lg">
         <Box className={classes.leftBox}>
           <Box className={classes.inputBox}>
             <SearchIcon className={classes.searchIcon} />
