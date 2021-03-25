@@ -3,16 +3,25 @@ import { makeStyles } from "@material-ui/core";
 export default makeStyles((theme) => ({
   mainContainer: {
     position: "relative",
+    height: "100vh",
     display: "flex",
+    justifyContent: "flex-start",
+    flexWrap: "wrap",
     backgroundColor: "#161a36",
     margin: "0px auto",
     padding: "0px",
-    overflow: "hidden",
-    boxSizing: 'content-box'
+    overflowX: "hidden",
+    overflowY: "auto",
+    boxSizing: "content-box",
   },
   leftBox: {
-    width: "35%",
-    padding: "20px",
+    width: "100%",
+    // padding: "20px",
+  },
+
+  swipeDrawer: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: { display: "block" },
   },
 
   inputBox: {
@@ -44,7 +53,7 @@ export default makeStyles((theme) => ({
 
   allContacts: {
     width: "100%",
-    height: '620px',
+    height: "620px",
     overflowY: "auto",
     overflowX: "hidden",
     scrollBehavior: "auto",
@@ -84,14 +93,18 @@ export default makeStyles((theme) => ({
   avatarMobile: {
     display: "flex",
     justifyContent: "flex-start",
-    color: "white",
+    color: "skyblue",
+    fontWeight: "bold",
     fontSize: "0.8rem",
     letterSpacing: "1px",
   },
 
   rightBox: {
-    width: "65%",
+    width: "100%",
     borderLeft: "2px solid white",
+    [theme.breakpoints.down("sm")]: {
+      borderLeft: "0px solid",
+    },
   },
 
   avatarBig: {
@@ -139,6 +152,16 @@ export default makeStyles((theme) => ({
     marginTop: "20px",
     marginRight: "20px",
     cursor: "pointer",
+    [theme.breakpoints.only("xs")]: {
+      display: "none",
+    },
+  },
+
+  contactsIcon: {
+    color: "#488bf7",
+    fontSize: "30px",
+    marginTop: "10px",
+    marginRight: "20px",
   },
 
   callIcon: {
@@ -147,6 +170,9 @@ export default makeStyles((theme) => ({
     marginTop: "20px",
     marginRight: "30px",
     cursor: "pointer",
+    [theme.breakpoints.only("xs")]: {
+      fontSize: "30px",
+    },
   },
 
   iconBtn: {
@@ -195,6 +221,9 @@ export default makeStyles((theme) => ({
     overflowY: "scroll",
     overflowX: "hidden",
     scrollBehavior: "auto",
+    [theme.breakpoints.down("sm")]: {
+      height: "450px",
+    },
   },
 
   messageView: {
@@ -202,10 +231,17 @@ export default makeStyles((theme) => ({
     border: "2px solid #488bf7",
     borderRadius: "20px",
     color: "white",
-    marginBottom: "10px",
+    marginBottom: "5px",
     marginRight: "20px",
     width: "250px",
     fontSize: "18px",
     wordWrap: "break-word",
+  },
+
+  timeDisplay: {
+    color: "white",
+    fontSize: '12px',
+    marginRight: "20px",
+    marginBottom: "15px",
   },
 }));
