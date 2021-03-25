@@ -197,7 +197,7 @@ export default makeStyles((theme) => ({
 
   messageInputBox: {
     position: "relative",
-    bottom: "1px",
+    bottom: "0px",
     width: "100%",
     backgroundColor: "#010a26",
     margin: "0px auto",
@@ -213,7 +213,6 @@ export default makeStyles((theme) => ({
 
   displayMessage: {
     width: "100%",
-    height: "530px",
     padding: "10px",
     display: "flex",
     flexDirection: "column",
@@ -224,6 +223,7 @@ export default makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "450px",
     },
+    height: "530px",
   },
 
   messageView: {
@@ -240,7 +240,7 @@ export default makeStyles((theme) => ({
 
   timeDisplay: {
     color: "white",
-    fontSize: '12px',
+    fontSize: "12px",
     marginRight: "20px",
     marginBottom: "15px",
   },
