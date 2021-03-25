@@ -27,8 +27,9 @@ export default makeStyles((theme) => ({
   inputBox: {
     position: "relative",
     margin: "0px auto",
-    width: "95%",
+    width: "100%",
     marginBottom: "20px",
+    backgroundColor: "#010a26",
   },
 
   input: {
