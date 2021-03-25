@@ -102,6 +102,7 @@ export default makeStyles((theme) => ({
 
   rightBox: {
     width: "100%",
+    height: '100vh',
     borderLeft: "2px solid white",
     [theme.breakpoints.down("sm")]: {
       borderLeft: "0px solid",
@@ -119,7 +120,6 @@ export default makeStyles((theme) => ({
     justifyContent: "space-around",
     width: "100%",
     padding: "20px",
-    height: "80px",
     margin: "0px auto",
     borderBottom: "3px solid white",
   },
@@ -159,6 +159,8 @@ export default makeStyles((theme) => ({
   },
 
   contactsIcon: {
+    width: theme.spacing(4),
+    height: theme.spacing(4),
     color: "#488bf7",
     fontSize: "30px",
     marginTop: "10px",
@@ -178,38 +180,39 @@ export default makeStyles((theme) => ({
 
   iconBtn: {
     position: "absolute",
-    top: "5px",
+    top: "3px",
     right: "10px",
     width: theme.spacing(5),
     height: theme.spacing(5),
-    zIndex: "1",
+    [theme.breakpoints.up("md")]: {
+      position: "absolute",
+      bottom: "5px",
+      left: "62%",
+    },
   },
 
   sendIcon: {
-    position: "absolute",
-    top: "5px",
-    right: "5px",
     fontSize: "30px",
     fontWeight: "bold",
     color: "#488bf7",
-    cursor: "pointer",
-    zIndex: "0",
   },
 
   messageInputBox: {
-    position: "relative",
+    position: "fixed",
     bottom: "0px",
     width: "100%",
     backgroundColor: "#010a26",
-    margin: "0px auto",
     padding: "5px",
   },
 
   inputMessage: {
-    width: "95%",
-    padding: "2px 30px 2px 20px",
+    width: "60%",
+    padding: "2px 30px 2px 25px",
     fontSize: "18px",
     color: "white",
+    [theme.breakpoints.down("sm")]: {
+      width: "95%",
+    },
   },
 
   displayMessage: {
@@ -218,23 +221,20 @@ export default makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-end",
-    overflowY: "scroll",
+    overflowY: "auto",
     overflowX: "hidden",
     scrollBehavior: "auto",
-    [theme.breakpoints.down("sm")]: {
-      height: "450px",
-    },
-    height: "530px",
+    height: "75vh",
   },
 
   messageView: {
-    padding: "10px",
+    padding: "10px 15px",
     border: "2px solid #488bf7",
     borderRadius: "20px",
     color: "white",
     marginBottom: "5px",
     marginRight: "20px",
-    width: "250px",
+    maxWidth: "250px",
     fontSize: "18px",
     wordWrap: "break-word",
   },
