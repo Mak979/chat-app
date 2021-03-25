@@ -104,7 +104,7 @@ function RightContainer(props) {
                 <SendIcon className={classes.sendIcon} />
               </IconButton>
 
-              <Input
+              <Input autoFocus
                 onChange={(e) => {
                   setNewMessage(e.target.value);
                 }}

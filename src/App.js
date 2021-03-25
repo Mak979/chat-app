@@ -1,12 +1,5 @@
 import "./App.css";
-import {
-  Box,
-  Input,
-  Container,
-  Avatar,
-  Grid,
-  Drawer,
-} from "@material-ui/core";
+import { Box, Input, Container, Avatar, Grid, Drawer } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import VideoCallIcon from "@material-ui/icons/VideoCall";
 import CallIcon from "@material-ui/icons/Call";
@@ -29,7 +22,10 @@ function App() {
     <div className="App">
       <Grid Container className={classes.mainContainer}>
         <Grid item md={4}>
-          <Box className={classes.leftBox} display={{ xs: "none", md: 'block' }}>
+          <Box
+            className={classes.leftBox}
+            display={{ xs: "none", md: "block" }}
+          >
             <Box className={classes.inputBox}>
               <SearchIcon className={classes.searchIcon} />
               <Input
@@ -53,6 +49,7 @@ function App() {
                 .map((user) => {
                   return (
                     <LeftContainer
+                      setIsDrawerOpen={() => {}}
                       user={user}
                       setSelectedUser={setSelectedUser}
                     />
@@ -76,7 +73,7 @@ function App() {
         }}
         className={classes.swipeDrawer}
       >
-        <Box className={classes.leftBox} maxHeight={"500px"} >
+        <Box className={classes.leftBox} maxHeight={"500px"}>
           <Box className={classes.inputBox}>
             <SearchIcon className={classes.searchIcon} />
             <Input
